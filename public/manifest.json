@@ -22,7 +22,7 @@
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["http://*.netflix.com/*", "https://*.netflix.com/*"],
       "js": ["contentScripts.js"]
     }
   ]
