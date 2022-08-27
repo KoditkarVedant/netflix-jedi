@@ -1,7 +1,5 @@
 import logger from "./logger";
-
-loadFile();
-skipIntro();
+import { SKIP_INTRO } from "./popup";
 
 function loadFile() {
   logger.info("May the force be with you!");
@@ -20,3 +18,10 @@ function skipIntro() {
     skipIntro();
   }, 1000);
 }
+
+loadFile();
+chrome.storage.sync.get([SKIP_INTRO], (result) => {
+  if (result[SKIP_INTRO]) {
+    skipIntro();
+  }
+});
