@@ -5,6 +5,7 @@ module.exports = {
   mode: "production",
   entry: {
     contentScripts: path.resolve(__dirname, "..", "src", "contentScripts.ts"),
+    popup: path.resolve(__dirname, "..", "src", "popup", "index.ts"),
   },
   output: {
     path: path.join(__dirname, "../dist"),
@@ -35,6 +36,11 @@ module.exports = {
           from: ".",
           to: "./images",
           context: "images",
+        },
+        {
+          from: "./**/*.html",
+          to: ".",
+          context: "src",
         },
       ],
     }),

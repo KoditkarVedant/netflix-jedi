@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex {
+        display: flex;
+      }
+
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .width-200px {
+        width: 200px;
+      }
+
+      .align-self-center {
+        align-self: center;
+      }
+
+      .pr-20px {
+        padding-right: 20px;
+      }
+
+      .text-md {
+        font-size: 16px;
+      }
+
+      .text-sm {
+        font-size: 14px;
+      }
+
+      .bold-500 {
+        font-weight: 500;
+      }
+
+      .p-10px {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-column width-200px">
+      <div class="flex">
+        <img
+          class="pr-20px"
+          src="/images/get_started32.png"
+          height="32"
+          width="32"
+        />
+        <span class="align-self-center text-md bold-500">Configuration</span>
+      </div>
+      <div class="flex p-10px">
+        <label class="text-sm pr-20px align-self-center">Skip Intro ?</label>
+        <input
+          id="skipIntroCheckbox"
+          class="align-self-center"
+          type="checkbox"
+        />
+      </div>
+      <br />
+      <span>* Please refresh the page for new settings to take effect.</span>
+    </div>
+    <script src="/popup.js"></script>
+  </body>
+</html>
